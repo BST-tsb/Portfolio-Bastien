@@ -1,0 +1,375 @@
+body {
+    max-width: 1080px;
+    min-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Poppins', sans-serif;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    
+}
+h2, h3, p {
+    color: #333;
+}
+h2 {
+    font-size: 1.9em;
+}
+h3 {
+    font-size: 1.375em;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+
+}
+nav a:hover {
+    background-color: #3D94CA;
+    color: white;
+}
+
+.pres {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 75px;
+
+}
+.pres p {
+    
+    font-size: 20px;
+}
+.image-profil {
+    height: 200px;
+    width: 200px;
+    
+}
+.image-profil img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.réseaux {
+    /* width: 100px; */
+    background-color: #f2f2f2;;
+    padding: 10px 30px;
+    border-radius: 15px;
+}
+.réseaux .fa-brands, .réseaux .fa-solid {
+    font-size: 35px;
+    color: #3D94CA;
+}
+.fa-linkedin:hover {
+    color: #0e76a8;
+    transform: scale(1.1);
+}
+.fa-square-github:hover {
+    color: #333;
+    transform: scale(1.1);
+}
+.fa-square-envelope:hover {
+    color: #C93C3D;
+    transform: scale(1.1);
+}
+.fa-square-phone-flip:hover {
+    color: #6EC93C;
+    transform: scale(1.1);
+}
+.cont-res-img {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.cont-skill {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    width: 30%;
+    height: 200px;
+    background-color: #f2f2f2;;
+    border-radius: 5%;
+}
+.skil-cont {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.cont-skill .fa-brands {
+    font-size: 35px;
+}
+.cont-proj {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3%;
+}
+.projet {
+    width: 31%;
+    background-color: #f2f2f2;;
+    margin-bottom: 3%;
+    border-radius: 5%;
+    min-height: 350px;
+    overflow: hidden;
+}
+
+.image-proj {
+    height: 300px;
+    width: 100%;
+    border-radius: 5%;
+    
+}
+.image-proj img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+}
+footer {
+    background-color: #f2f2f2;;
+    margin-top: 45px;
+    padding: 25px;
+}
+footer ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    justify-content: center;
+    
+}
+footer ul li a{
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+}
+footer ul li a:hover{
+    background-color: #3D94CA;
+    color: white;
+}
+
+.projet:hover > .image-proj {
+    display: none;
+}
+.cont-desc {
+    display: none;
+    height: 300px;
+}
+.projet:hover > .cont-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    text-align: justify;
+    justify-content: space-evenly;
+}
+.projet h3 {
+    text-align: center;
+}
+
+@keyframes slide-in {
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes slide-out {
+    100% {
+        transform: translateX(100%);
+    }
+}
+@keyframes txt-apparance {
+    100% {
+        color: #333;
+    }
+}
+@keyframes txt-apparance2 {
+    100% {
+        color: #3D94CA;
+    }
+}
+
+.main-title {
+    color: transparent;
+}
+
+.span {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    font-size: clamp(20px, 5vw, 120px);
+}
+.span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-color: #3D94CA;
+    animation: slide-in 0.75s 0.3s ease-out forwards, slide-out 0.75s 1.3s ease-out forwards;
+}
+
+.main-title span:nth-child(1) {
+    animation: txt-apparance 0s 1s forwards;
+}
+.main-title span:nth-child(2) {
+    animation: txt-apparance2 0s 1s forwards;
+}
+
+[class*="reveal-"] {
+    opacity: 0;
+    transform: translateY(-30px);
+}
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+.reveal-1 {
+    transition-delay: 0.2s;
+}
+.reveal-2 {
+    transition-delay: 0.4s;
+}
+.reveal-3 {
+    transition-delay: 0.6s;
+}
+.reveal-4 {
+    transition-delay: 0.8s;
+}
+.reveal-5 {
+    transition-delay: 1.0s;
+}
+.reveal-6 {
+    transition-delay: 1.2s;
+}
+
+.animated-link {
+    --font-size: 20px;
+    font-size: var(--font-size);
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+  }
+  .animated-link::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: calc(var(--font-size) * 2);
+    height: calc(var(--font-size) * 2);
+    border-radius: calc(var(--font-size));
+    background-color: #3D94CA;
+    top: 50%;
+    left: -15%;
+    transform: translateY(-50%);
+    transition: width 0.6s cubic-bezier(.8,0,.24,.99);
+  }
+  
+  .animated-link:hover::before {
+    width: calc(100% + 30%); 
+    /* + 2x le décaalge*/
+  }
+  .btn-proj {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+  
+a {
+    text-decoration: none;
+    color: #333;
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: justify;
+}
+.btn-cv {
+    padding: 20px 40px;
+    background: #3D94CA;
+    color: white;
+    border-radius: 20px;
+    font-weight: 700;
+}
+.btn-cv:hover {
+    transform: scale(1.1);
+    box-shadow: 0 30px 66px -1px rgba(62, 135, 194, 0.253);
+}
+@media (max-width: 1180px) {
+
+    main {
+        margin: 0 20px ;
+    }
+    .projet {
+        width: 48%;
+        
+    }
+  }
+
+
+
+@media (max-width: 800px) {
+    nav {
+        gap: 0px;
+    }
+    nav a {
+        padding: 5px;
+    }
+
+    .pres {
+        flex-direction: column-reverse;
+        text-align: justify;
+    }
+    .span {
+        font-size: clamp(20px, 7vw, 120px);
+    }
+    .cont-proj {
+        flex-direction: column;
+        width: 100%;
+    }
+    .projet {
+        width: 100%;
+        
+    }
+    .skil-cont {
+        flex-direction: column;
+    }
+
+    .cont-skill {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .title {
+        text-align: center;
+    }
+    
+
+   
+  }
+  

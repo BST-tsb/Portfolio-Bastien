@@ -59,6 +59,8 @@ nav a:hover {
     height: 100%;
     width: 100%;
     border-radius: 50%;
+    object-fit: cover;
+    background-color: #3D94CA;
 }
 .réseaux {
     /* width: 100px; */

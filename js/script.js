@@ -21,6 +21,14 @@ const projet = [
 
     },
     {
+        "titre":"Calculatrice",
+        "image":"calcul.webp",
+		"description":"calculatrice reprenant un design similaire de la calculatrice utilisé sur l'iphone",
+        "github":"https://github.com/BST-tsb/CALCULATRICE",
+	"site":"https://bst-tsb.github.io/CALCULATRICE/"
+
+    },
+    {
         "titre":"OhMyFood",
         "image":"OhMyFood.webp",
 		"description":"Oh My Food est une réalisation en mobil first, il permet de voir différents restaurants et menus. Les langages utilisés sont HTML/SASS",

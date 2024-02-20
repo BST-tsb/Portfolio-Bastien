@@ -22,7 +22,7 @@ const projet = [
     },
     {
         "titre":"Calculatrice",
-        "image":"calcul.webp",
+        "image":"calcul.png",
 		"description":"calculatrice reprenant un design similaire de la calculatrice utilisé sur l'iphone",
         "github":"https://github.com/BST-tsb/CALCULATRICE",
 	"site":"https://bst-tsb.github.io/CALCULATRICE/"
